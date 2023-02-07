@@ -1,0 +1,120 @@
+.cursor1 {
+    cursor: pointer;
+}
+.crusor2 {
+    cursor: grab;
+}
+.crusor3 {
+    cursor: progress;
+}
+.crusor4 {
+    cursor: grab;
+}
+.crusor5 {
+    cursor: grab;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.square {
+  position: relative;
+  width: 80px;
+  border: solid red 5px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  display: none;
+}
+.content:hover + .hide {
+  display: block;
+  color: black;
+  position: absolute;
+}
+
+
+.div1 {
+  height: 100%;
+  width: 50%;
+  background: black;
+}
+.div2 {
+  height: 100%;
+  width: 50%;
+  background: red;
+}
+
+
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+.split1 {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+}
+.left {
+  left: 0;
+  background-color: red;
+}
+
+.right {
+  right: 0;
+  background-color: black;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.split:hover {
+  background: black;
+}
+.split:hover + .split1.right {
+  background: red;
+}
